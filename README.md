@@ -26,7 +26,7 @@ A Model Context Protocol (MCP) server that provides daily horoscope readings and
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:GBcui/horoscope-serve.git
+git clone https://github.com/GBcui/horoscope-serve.git
 cd horoscope-serve
 ```
 
@@ -84,7 +84,7 @@ arguments: {
 
 Sample output:
 
-``` txt
+```txt
 白羊座 2024年3月27日运势
 
 ▎ 整体运势 ★★★★☆
@@ -101,6 +101,7 @@ Sample output:
 ## 星座运势 MCP 服务器
 
 一个提供星座运势和运程预测的 Model Context Protocol (MCP) 服务器。该服务器集成了星座运势 API，为全部十二星座提供详细的运势解读。
+
 ![Horoscope MCP Server](./test.png)
 
 ## 功能特点
@@ -122,7 +123,7 @@ Sample output:
 1. 克隆仓库：
 
 ```bash
-git clone git@github.com:GBcui/horoscope-serve.git
+git clone https://github.com/GBcui/horoscope-serve.git
 cd horoscope-serve
 ```
 
@@ -180,7 +181,7 @@ arguments: {
 
 返回数据示例：
 
-``` txt
+```txt
 白羊座 2024年3月27日运势
 
 ▎ 整体运势 ★★★★☆

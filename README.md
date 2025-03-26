@@ -2,11 +2,10 @@
 
 [English](#english) | [中文](#chinese)
 
-<a href="https://glama.ai/mcp/servers/horoscope"><img width="380" height="200" src="https://glama.ai/mcp/servers/horoscope/badge" alt="Horoscope MCP server" /></a>
-
-# English
+## English
 
 A Model Context Protocol (MCP) server that provides daily horoscope readings and fortune telling. This server integrates with a horoscope API to provide detailed fortune readings for all zodiac signs.
+![Horoscope MCP Server](./test.png)
 
 ## Features
 
@@ -25,17 +24,20 @@ A Model Context Protocol (MCP) server that provides daily horoscope readings and
 ## Installation
 
 1. Clone the repository:
+
 ```bash
-git clone https://github.com/yourusername/horoscope-serve
+git clone git@github.com:GBcui/horoscope-serve.git
 cd horoscope-serve
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Build the server:
+
 ```bash
 npm run build
 ```
@@ -43,6 +45,7 @@ npm run build
 4. Add to your MCP settings configuration file (location depends on your system):
 
 For VSCode Claude extension:
+
 ```json
 {
   "mcpServers": {
@@ -61,12 +64,14 @@ The server provides a tool called `get-horoscope` that can be used to fetch horo
 ### Tool: get-horoscope
 
 Parameters:
+
 - `type` (string): Zodiac sign
   - Options: 'aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'
 - `time` (string): Time range for the reading
   - Options: 'today', 'nextday', 'week', 'month'
 
 Example usage:
+
 ```typescript
 use_mcp_tool with:
 server_name: "horoscope"
@@ -78,7 +83,8 @@ arguments: {
 ```
 
 Sample output:
-```
+
+``` txt
 白羊座 2024年3月27日运势
 
 ▎ 整体运势 ★★★★☆
@@ -90,11 +96,12 @@ Sample output:
 [Additional sections...]
 ```
 
-# Chinese
+## Chinese
 
-# 星座运势 MCP 服务器
+## 星座运势 MCP 服务器
 
 一个提供星座运势和运程预测的 Model Context Protocol (MCP) 服务器。该服务器集成了星座运势 API，为全部十二星座提供详细的运势解读。
+![Horoscope MCP Server](./test.png)
 
 ## 功能特点
 
@@ -113,24 +120,28 @@ Sample output:
 ## 安装步骤
 
 1. 克隆仓库：
+
 ```bash
-git clone https://github.com/yourusername/horoscope-serve
+git clone git@github.com:GBcui/horoscope-serve.git
 cd horoscope-serve
 ```
 
 2. 安装依赖：
+
 ```bash
 npm install
 ```
 
 3. 构建服务器：
+
 ```bash
 npm run build
 ```
 
 4. 在 MCP 设置配置文件中添加（具体位置取决于您的系统）：
 
-VSCode Claude  / Cursor 扩展配置：
+VSCode Claude / Cursor 扩展配置：
+
 ```json
 {
   "mcpServers": {
@@ -149,12 +160,14 @@ VSCode Claude  / Cursor 扩展配置：
 ### 工具：get-horoscope
 
 参数说明：
+
 - `type` (字符串)：星座类型
   - 可选值：'aries'（白羊座）, 'taurus'（金牛座）, 'gemini'（双子座）, 'cancer'（巨蟹座）, 'leo'（狮子座）, 'virgo'（处女座）, 'libra'（天秤座）, 'scorpio'（天蝎座）, 'sagittarius'（射手座）, 'capricorn'（摩羯座）, 'aquarius'（水瓶座）, 'pisces'（双鱼座）
 - `time` (字符串)：运势时间范围
   - 可选值：'today'（今日）, 'nextday'（明日）, 'week'（本周）, 'month'（本月）
 
 使用示例：
+
 ```typescript
 use_mcp_tool with:
 server_name: "horoscope"
@@ -166,7 +179,8 @@ arguments: {
 ```
 
 返回数据示例：
-```
+
+``` txt
 白羊座 2024年3月27日运势
 
 ▎ 整体运势 ★★★★☆
@@ -181,6 +195,7 @@ arguments: {
 ## 技术实现
 
 使用以下技术构建：
+
 - TypeScript
 - Model Context Protocol SDK
 - Node.js Fetch API
@@ -189,6 +204,7 @@ arguments: {
 ## 错误处理
 
 服务器包含完善的错误处理机制，涵盖：
+
 - 无效的星座类型
 - 无效的时间范围
 - API 请求失败

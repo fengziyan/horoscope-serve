@@ -1,38 +1,13 @@
-# Smithery 配置文件: https://smithery.ai/docs/deployments
-
 name: horoscope-server
-description: 星座运势服务，提供各种星座的运势预测
+description: 星座运势服务
 
-# 构建配置
 build:
   type: docker
-  dockerfile: Dockerfile
 
-# 启动命令配置
 startCommand:
   type: stdio
   configSchema:
-    # JSON Schema defining the configuration options for the MCP.
     type: object
-    required: []
     properties: {}
   commandFunction: |
-    config => ({ command: 'node', args: ['dist/index.js'] })
-
-# 服务端口配置（如果需要）
-port: 3000
-
-# 环境变量配置
-env:
-  NODE_ENV: production
-
-# 资源限制配置
-resources:
-  cpu: 0.5
-  memory: 512Mi
-
-# 健康检查配置
-healthCheck:
-  path: /health
-  initialDelaySeconds: 5
-  periodSeconds: 10
+    config => ({ command: 'node', args: ['dist/index.js'] }) 

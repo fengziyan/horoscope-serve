@@ -1,36 +1,12 @@
-# Stage 1: Build the application
-FROM node:18-alpine AS builder
+FROM node:18-alpine
 
-# Set working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package.json package-lock.json ./
-
-# Install dependencies
+COPY package*.json ./
 RUN npm install
 
-# Copy the rest of the application
 COPY . .
+RUN npm run build || npm run build:win
+RUN chmod +x ./dist/*.js
 
-# Build the application
-RUN npm run build
-
-# Stage 2: Create the production image
-FROM node:18-alpine AS production
-
-# Set working directory
-WORKDIR /app
-
-# Copy the built files from the builder stage
-COPY --from=builder /app/dist /app/dist
-COPY --from=builder /app/package.json /app/package-lock.json ./
-
-# Install production dependencies only
-RUN npm ci --omit=dev
-
-# Expose port if needed (optional)
-EXPOSE 3000
-
-# Specify the default command
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/index.js"] 

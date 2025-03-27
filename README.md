@@ -5,6 +5,7 @@
 ## English
 
 A Model Context Protocol (MCP) server that provides daily horoscope readings and fortune telling. This server integrates with a horoscope API to provide detailed fortune readings for all zodiac signs.
+[![smithery badge](https://smithery.ai/badge/@GBcui/horoscope-serve)](https://smithery.ai/server/@GBcui/horoscope-serve)
 ![Horoscope MCP Server](./test.png)
 
 ## Features
@@ -101,8 +102,9 @@ Sample output:
 ## 星座运势 MCP 服务器
 
 一个提供星座运势和运程预测的 Model Context Protocol (MCP) 服务器。该服务器集成了星座运势 API，为全部十二星座提供详细的运势解读。
-
+[![smithery badge](https://smithery.ai/badge/@GBcui/horoscope-serve)](https://smithery.ai/server/@GBcui/horoscope-serve)
 ![Horoscope MCP Server](./test.png)
+
 
 ## 功能特点
 

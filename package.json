@@ -1,6 +1,10 @@
 {
   "name": "horoscope",
   "version": "1.0.0",
+  "license": "MIT",
+  "author": "Freddie",
+  "homepage": "https://github.com/GBcui/horoscope-serve",
+  "bugs": "https://github.com/GBcui/horoscope-serve/issues",
   "type": "module",
   "access": "public",
   "main": "dist/index.js",
@@ -19,8 +23,6 @@
     "dist"
   ],
   "keywords": [],
-  "author": "",
-  "license": "MIT",
   "description": "",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.7.0",

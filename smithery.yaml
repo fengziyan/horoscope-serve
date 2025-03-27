@@ -1,13 +1,13 @@
-name: horoscope-server
-description: 星座运势服务
-
-build:
-  type: docker
+# Smithery configuration file: https://smithery.ai/docs/deployments
 
 startCommand:
   type: stdio
   configSchema:
+    # JSON Schema defining the configuration options for the MCP.
     type: object
+    required: []
     properties: {}
-  commandFunction: |
-    config => ({ command: 'node', args: ['dist/index.js'] }) 
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    config => ({ command: 'node', args: ['dist/index.js'] })

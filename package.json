@@ -1,15 +1,15 @@
 {
   "name": "horoscope",
   "version": "1.0.0",
-  "main": "horoscope.js",
+  "main": "index.js",
   "type": "module",
   "bin": {
-    "horoscope": "./build/horoscope.js"
+    "horoscope": "./build/index.js"
   },
   "scripts": {
-   "build": "tsc && node -e \"require('fs').chmodSync('build/horoscope.js', '755')\"",
+   "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
    "watch": "tsc --watch",
-   "inspector": "npx @modelcontextprotocol/inspector build/horoscope.js"
+   "inspector": "npx @modelcontextprotocol/inspector build/index.js"
   },
   "files": [
     "build"

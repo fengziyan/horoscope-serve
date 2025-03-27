@@ -1,10 +1,10 @@
 {
-  "name": "weather",
+  "name": "horoscope",
   "version": "1.0.0",
   "main": "horoscope.js",
   "type": "module",
   "bin": {
-    "weather": "./build/horoscope.js"
+    "horoscope": "./build/horoscope.js"
   },
   "scripts": {
    "build": "tsc && node -e \"require('fs').chmodSync('build/horoscope.js', '755')\"",

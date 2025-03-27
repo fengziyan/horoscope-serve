@@ -24,10 +24,13 @@ WORKDIR /app
 
 # Copy the built files from the builder stage
 COPY --from=builder /app/dist /app/dist
-COPY --from=builder /app/package.json /app/package-lock.json /app/
+COPY --from=builder /app/package.json /app/package-lock.json ./
 
 # Install production dependencies only
 RUN npm ci --omit=dev
 
+# Expose port if needed (optional)
+EXPOSE 3000
+
 # Specify the default command
-ENTRYPOINT ["node", "dist/index.js"]
+CMD ["node", "dist/index.js"]

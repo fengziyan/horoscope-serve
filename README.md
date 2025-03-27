@@ -23,6 +23,15 @@ A Model Context Protocol (MCP) server that provides daily horoscope readings and
 
 ## Installation
 
+### Installing via Smithery
+
+To install horoscope-serve for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@GBcui/horoscope-serve):
+
+```bash
+npx -y @smithery/cli install @GBcui/horoscope-serve --client claude
+```
+
+### Manual Installation
 1. Clone the repository:
 
 ```bash
@@ -120,6 +129,15 @@ Sample output:
 
 ## 安装步骤
 
+### 使用 Smithery 安装
+
+通过 [Smithery](https://smithery.ai/server/@GBcui/horoscope-serve) 自动为 Claude Desktop 安装 horoscope-serve:
+
+```bash
+npx -y @smithery/cli install @GBcui/horoscope-serve --client claude
+```
+
+### 手动安装
 1. 克隆仓库：
 
 ```bash

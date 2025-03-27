@@ -13,11 +13,10 @@
     "horoscope": "dist/index.js"
   },
   "scripts": {
-   "build": "tsc && shx chmod +x dist/*.js",
-   "build:win": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
-   "prepare": "npm run build",
-   "watch": "tsc --watch",
-   "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
+    "build": "tsc && shx chmod +x dist/*.js",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
   },
   "files": [
     "dist"
@@ -30,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.13.13",
+    "shx": "^0.4.0",
     "typescript": "^5.8.2"
   }
 }

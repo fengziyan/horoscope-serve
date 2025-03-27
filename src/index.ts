@@ -143,7 +143,7 @@ function isValidType(type: string): boolean {
  * @returns 星座运势数据
  */
 server.tool(
-  "get-horoscope", // 工具名称
+  "get_horoscope", // 工具名称，从 "get-horoscope" 更改为 "get_horoscope"
   "Get your horoscope",
   {
     // 定义参数及其验证规则

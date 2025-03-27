@@ -1,18 +1,22 @@
 {
   "name": "horoscope",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
+  "access": "public",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "bin": {
-    "horoscope": "./build/index.js"
+    "horoscope": "dist/index.js"
   },
   "scripts": {
-   "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+   "build": "tsc && shx chmod +x dist/*.js",
+   "build:win": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
+   "prepare": "npm run build",
    "watch": "tsc --watch",
-   "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+   "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "keywords": [],
   "author": "",

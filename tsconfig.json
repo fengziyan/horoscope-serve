@@ -13,3 +13,11 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
+
+"mcpServers": {
+  "horoscope": {
+    "command": "node",
+    "args": ["C:/Users/54419/vx/horoscope-serve/dist/index.js
+"]
+  }
+}
